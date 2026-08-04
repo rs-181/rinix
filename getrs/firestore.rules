@@ -1,0 +1,53 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // rsandhi37@gmail.com is the only account allowed to act as admin.
+    // This is the ONE place that actually matters for admin security —
+    // js/admin.js's client-side check is just UX (it blanks the page to
+    // look like a 404 for anyone else); Firebase enforces this rule
+    // server-side regardless of what the client's JS does or doesn't do.
+    function isAdmin() {
+      return request.auth != null && request.auth.token.email == "rsandhi37@gmail.com";
+    }
+
+    match /sites/{siteId} {
+      // GET (single-document reads, by ID) is public. This is required
+      // because, with no server/Admin SDK in this architecture, public
+      // site rendering (site.js) and the site-creation uniqueness
+      // transaction (dashboard.js) both have to read arbitrary site docs
+      // directly from the client.
+      allow get: if true;
+
+      // LIST (collection queries) is NOT public — only an authenticated
+      // user querying their own sites, or the admin querying anything.
+      // Without this split, "allow read: if true" would let anyone open
+      // devtools and run collection('sites').get() to dump every user's
+      // data, including passwordHash. Firestore evaluates this condition
+      // per returned document, so a query only succeeds if EVERY
+      // document it would return satisfies one of these two clauses.
+      allow list: if request.auth != null
+                    && (resource.data.ownerId == request.auth.uid || isAdmin());
+
+      allow create: if request.auth != null
+                      && request.resource.data.ownerId == request.auth.uid
+                      && request.resource.data.get('isSuspended', false) == false;
+
+      // Owners can update their own site, but never isSuspended or
+      // ownerId — those are admin-only (closes the "suspended owner just
+      // un-suspends themselves" loophole). The admin can update anything
+      // on any site (used for suspend/unsuspend and the moderation edit
+      // modal's name/sitename change).
+      allow update: if request.auth != null
+                      && (
+                        (resource.data.ownerId == request.auth.uid
+                          && request.resource.data.ownerId == resource.data.ownerId
+                          && request.resource.data.get('isSuspended', false) == resource.data.get('isSuspended', false))
+                        || isAdmin()
+                      );
+
+      allow delete: if request.auth != null
+                      && (resource.data.ownerId == request.auth.uid || isAdmin());
+    }
+  }
+}

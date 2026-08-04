@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up — RS Net</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { charcoal: { 950:'#0a0a0b',900:'#121214',800:'#1a1a1d',700:'#242428',600:'#333338',300:'#a8a8b0' }, gold: { 400:'#e8c37a',500:'#d4a94f' }, electric: { 400:'#4f9dff' } },
+        fontFamily: { display:['Syne','Inter','sans-serif'], body:['DM Sans','Roboto','sans-serif'] },
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="font-body">
+  <main class="flex min-h-screen items-center justify-center px-6">
+    <div class="card w-full max-w-sm animate-scale-in p-8">
+      <h1 class="mb-1 font-display text-2xl font-bold">Create your account</h1>
+      <p class="mb-6 text-sm text-charcoal-300">Free forever. No credit card needed.</p>
+
+      <button id="google-btn" type="button" class="btn-secondary flex w-full items-center justify-center gap-2">
+        <svg viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+          <path fill="#EA4335" d="M12 10.2v3.96h5.52c-.24 1.44-1.68 4.2-5.52 4.2-3.3 0-6-2.76-6-6.36s2.7-6.36 6-6.36c1.86 0 3.12.78 3.84 1.44l2.64-2.52C16.98 3.36 14.7 2.4 12 2.4 6.9 2.4 2.76 6.6 2.76 11.76S6.9 21.12 12 21.12c6.24 0 8.4-4.44 8.4-6.72 0-.66-.06-1.14-.18-1.68H12z" />
+        </svg>
+        Sign up with Google
+      </button>
+
+      <div class="my-4 flex items-center gap-3">
+        <div class="h-px flex-1 bg-charcoal-700"></div>
+        <span class="text-xs text-charcoal-300">or</span>
+        <div class="h-px flex-1 bg-charcoal-700"></div>
+      </div>
+
+      <form id="signup-form" class="space-y-4">
+        <div>
+          <label class="mb-1 block text-sm text-charcoal-300">Email</label>
+          <input id="email" type="email" required class="input" placeholder="you@example.com" />
+        </div>
+        <div>
+          <label class="mb-1 block text-sm text-charcoal-300">Password</label>
+          <input id="password" type="password" required class="input" placeholder="At least 6 characters" />
+        </div>
+        <p id="error" class="hidden text-sm text-red-400"></p>
+        <button id="submit-btn" type="submit" class="btn-primary w-full">Sign up free</button>
+      </form>
+
+      <p class="mt-6 text-center text-sm text-charcoal-300">
+        Already have an account? <a href="login.html" class="text-gold-500 hover:underline">Log in</a>
+      </p>
+    </div>
+  </main>
+
+  <script type="module" src="js/signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+name: Unzip Codebase
+
+on:
+  push:
+    paths:
+      - '*.zip' # Jab bhi koi nayi .zip file push hogi, yeh action chal jayega
+  workflow_dispatch: # Aap ise GitHub se manually bhi chala sakte hain
+
+jobs:
+  unzip-and-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Repository mein wapas files save karne ki permission
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Extract Zip File
+        run: |
+          # Repository mein maujood zip file ko dhoondna
+          ZIP_FILE=$(ls *.zip | head -n 1)
+          
+          if [ -f "$ZIP_FILE" ]; then
+            echo "$ZIP_FILE mil gayi hai, isko unzip kiya ja raha hai..."
+            
+            # Zip file ko uski jagah par extract karna
+            unzip -o "$ZIP_FILE" -d ./
+            
+            # Extract hone ke baad zip file ko delete karna (taaki space bache)
+            rm "$ZIP_FILE" 
+          else
+            echo "Koi zip file nahi mili."
+            exit 1
+          fi
+
+      - name: Commit and Push changes
+        run: |
+          # Nayi nikali gayi files ko repository mein wapas save karna
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Automated codebase extraction from zip file" || echo "Save karne ke liye koi naya badlaav nahi hai"
+          git push
+

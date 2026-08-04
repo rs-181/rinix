@@ -78,4 +78,4 @@ worth reading before you deploy this:
 
 - No Cloud Function cleanup for orphaned Storage images when a site is deleted.
 - Admin's site-rename doesn't re-check URL collisions the way creation does.
-- Single hardcoded admin email — multiple moderators would need a different scheme.
+- Single hardcoded admin email — multiple moderators would need a different scheme.  .

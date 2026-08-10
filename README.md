@@ -1,66 +1,203 @@
-# Rinix Agency — Production Website
+Rinix Agency Website
 
-A production-ready, framework-free progressive web app for Rinix Agency, a
-premium web development and digital solutions studio.
+A premium, modern agency website built with vanilla HTML, CSS, and JavaScript. Features a dark theme, smooth animations, PWA support, and a fully responsive design.
 
-## Stack
+https://rinix.netlify.app/og-image.png
 
-- HTML5 semantic markup
-- Modern CSS3 (custom properties, flexbox, grid) — no CSS framework
-- Vanilla JavaScript (ES6+) — no dependencies
-- Web App Manifest + Service Worker (installable, offline-capable PWA)
+🚀 Live Demo
 
-## File structure
+rinix.netlify.app
 
-Everything lives at the root level — no subdirectories:
+✨ Features
+
+· Modern Design – Dark theme with gradient accents and smooth animations
+· Fully Responsive – Works flawlessly on mobile, tablet, and desktop
+· PWA Ready – Installable as a native app on mobile devices
+· Portfolio Showcase – Dynamic project cards rendered from JavaScript
+· Contact Form – Integrated with Netlify Forms, includes validation
+· Interactive Navigation – Sticky header with mobile hamburger menu
+· Scroll Animations – Intersection Observer-based reveal effects
+· Performance Optimized – Lighthouse 95+ target, lazy loading images
+· SEO Friendly – Schema markup, meta tags, and semantic HTML
+· Service Worker – Offline support and caching
+
+📁 Project Structure
 
 ```
-index.html          Main page (all sections)
-404.html            Custom not-found page
-manifest.json        PWA manifest
-sw.js                Service worker (offline caching)
-sw-register.js        Service worker registration
-robots.txt            Crawler rules + sitemap reference
-sitemap.xml            XML sitemap
-style.css              Core design system styles
-responsive.css          Breakpoint rules (320–1920px)
-app.js                Behavior: nav, portfolio render, form, reveals, install prompt
-favicon.ico            Multi-size favicon
-icon-192.png            PWA icon
-icon-512.png            PWA icon
-og-image.png            Social share image (1200x630)
-logo.png              Primary brand mark (gradient)
-logo-mono.png          Monochrome brand mark
-ghostline-chat.png       Portfolio preview
-amrutam-water.png        Portfolio preview
-rs-browser.png          Portfolio preview
-generate_assets.py       Script used to generate brand imagery (not required in production)
+rinix-agency/
+├── index.html          # Main HTML document
+├── 404.html            # Custom 404 error page
+├── style.css           # Core styles
+├── responsive.css      # Responsive breakpoints
+├── app.js              # Main JavaScript functionality
+├── sw.js               # Service Worker
+├── sw-register.js      # Service Worker registration
+├── manifest.json       # PWA manifest
+├── logo.png            # Brand logo
+├── icon-192.png        # PWA icon (192x192)
+├── icon-512.png        # PWA icon (512x512)
+└── favicon.ico         # Browser favicon
 ```
 
-## Before deploying
+🛠️ Technologies Used
 
-1. **Domain**: swap `https://rinix.agency` in `index.html`, `robots.txt`,
-   and `sitemap.xml` for your real production domain.
-2. **Analytics**: add your GA4 snippet and Search Console verification
-   meta tag where marked in `index.html`.
-3. **Contact form**: the form currently falls back to a `mailto:` draft to
-   `contact.rinix@proton.me` since no backend is wired up. Connect a form
-   service (Netlify Forms, Formspree, etc.) if you want submissions
-   captured server-side instead.
-4. **Images**: `generate_assets.py` was used to produce the brand mark,
-   icons, OG image, and portfolio previews programmatically. Swap in real
-   photography/screenshots for the three portfolio images before launch
-   for the strongest impression.
-5. Run through the full pre-deployment checklist from the production
-   brief (responsive breakpoints, Lighthouse scores, PWA install,
-   structured data validation, broken links) before going live.
+· HTML5 – Semantic markup
+· CSS3 – Custom properties, flexbox, grid, animations
+· JavaScript (ES6) – Vanilla JS, no dependencies
+· Google Fonts – Outfit & Inter
+· Font Awesome – Premium icons
+· Netlify Forms – Form handling
+· PWA – Service Worker & Manifest
 
-## Deploy to Netlify
+🎨 Design System
 
-1. Push this folder to a Git repository.
-2. Connect the repo in Netlify, or drag-and-drop the folder into
-   Netlify's manual deploy target.
-3. No build command is needed — this is a static site with no dependencies.
-4. Set the publish directory to the project root.
-5. After deploy, submit `sitemap.xml` to Google Search Console and
-   request indexing.
+Colors
+
+· --bg-primary: #0A0A0C
+· --accent-blue: #00D2FF
+· --accent-violet: #7C3AED
+· --accent-magenta: #C026D3
+· Gradient: Blue → Violet → Magenta
+
+Typography
+
+· Headings: Outfit
+· Body: Inter
+
+Spacing Scale
+
+· Based on rem units: 0.5, 1, 1.5, 2, 3, 4.5, 7
+
+📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/rinix-agency.git
+
+# Navigate to the project
+cd rinix-agency
+
+# Open in browser
+open index.html
+```
+
+🔧 Configuration
+
+Netlify Forms
+
+The contact form is configured for Netlify. To use it:
+
+1. Deploy to Netlify
+2. Netlify automatically detects the form
+3. Check your Netlify dashboard for submissions
+
+PWA Setup
+
+1. Replace placeholder images with your own:
+   · icon-192.png
+   · icon-512.png
+   · logo.png
+2. Update manifest.json with your app details
+3. Update sw.js with your asset list
+
+Analytics
+
+Uncomment and add your Google Analytics ID in index.html:
+
+```html
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+```
+
+🚀 Deployment
+
+Netlify (Recommended)
+
+```bash
+# Install Netlify CLI
+npm install -g netlify-cli
+
+# Deploy
+netlify deploy --prod
+```
+
+Or simply drag-and-drop the project folder to Netlify's dashboard.
+
+Manual Deployment
+
+Upload all files to your web host. Ensure the following files are included:
+
+· All .html, .css, .js files
+· Image assets (logo, icons, portfolio images)
+· manifest.json
+· sw.js
+
+📱 Progressive Web App
+
+The site is installable as a PWA. Key features:
+
+· Offline Support – Core assets cached
+· Install Prompt – Shows when user visits multiple times
+· Mobile-First – Optimized for touch interactions
+· Standalone Mode – App-like experience when installed
+
+🔍 SEO Features
+
+· Meta tags for social sharing (Open Graph, Twitter Cards)
+· JSON-LD Schema Markup:
+  · Organization
+  · Services
+  · FAQ Page
+· Semantic HTML5 structure
+· Canonical URLs
+· Mobile-friendly
+· Fast loading with lazy loading
+
+📝 Adding Projects
+
+Edit the portfolioProjects array in app.js:
+
+```javascript
+const portfolioProjects = [
+  {
+    title: 'Your Project',
+    description: 'Project description',
+    category: 'Category',
+    tags: ['Tag1', 'Tag2'],
+    image: 'image-name.png',
+    url: 'https://project-url.com'
+  }
+];
+```
+
+⚡ Performance
+
+· Lighthouse Score: 95+ target
+· Core Web Vitals: Optimized
+· Bundle Size: Minimal (~15KB for JS/CSS combined)
+· No Dependencies: Zero external library overhead
+· Image Lazy Loading: Native lazy loading
+· Font Loading: Preconnect and optimized Google Fonts
+
+🌐 Browser Support
+
+· Chrome (latest)
+· Firefox (latest)
+· Safari (latest)
+· Edge (latest)
+· Opera (latest)
+· Mobile browsers (iOS Safari, Android Chrome)
+
+📄 License
+
+This project is proprietary. All rights reserved.
+
+👥 Contact
+
+For any questions or support:
+
+· Email: contact.rinix@proton.me
+· Instagram: @rinix.netlify.app
+
+---
+
+Built with ❤️ by Rinix Agency

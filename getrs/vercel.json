@@ -1,7 +1,0 @@
-{
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/sites/:sitename", "destination": "/site.html" },
-    { "source": "/sites/:sitename/:pageSlug", "destination": "/site.html" }
-  ]
-}

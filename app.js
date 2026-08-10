@@ -14,7 +14,7 @@ const portfolioProjects = [
     category: 'Messaging Platform',
     tags: ['Real-Time', 'WebRTC', 'PWA'],
     image: 'ghostline-chat.png',
-    url: 'https://ghostline-chat.netlify.app'
+    url: 'https://ghostline.rinix.online'
   },
   {
     title: 'Amrutam Water',
@@ -25,12 +25,12 @@ const portfolioProjects = [
     url: 'https://amrutam-water.netlify.app'
   },
   {
-    title: 'RS App Store',
+    title: 'Rinix Store',
     description: 'A curated collection of our latest web applications and tools, all in one accessible place.',
     category: 'App Distribution',
     tags: ['Storefront', 'Applications','WebSites'],
     image: 'rs-appstore.png', // Ensure this image exists in your folder
-    url: 'https://rs-appstore.blogspot.com'
+    url: 'https://store.rinix.online'
   },
   {
     title: 'RS Browser',
@@ -173,6 +173,7 @@ function initContactForm() {
 }
 
 /* ---------- PWA install prompt ---------- */
+/* ---------- PWA install prompt ---------- */
 function initInstallPrompt() {
   const toast = document.getElementById('installToast');
   const installBtn = document.getElementById('installBtn');
@@ -181,27 +182,43 @@ function initInstallPrompt() {
 
   let deferredPrompt = null;
 
-  // app.js mein line 150 ke aas paas
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  // Yahan sessionStorage ki jagah localStorage karein
-  if (!localStorage.getItem('rinix-install-dismissed')) {
-    toast.hidden = false;
-  }
-});
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    
+    // Check if user previously dismissed it
+    if (!localStorage.getItem('rinix-install-dismissed')) {
+      toast.hidden = false;
+    }
+  });
 
-dismissBtn.addEventListener('click', () => {
-  toast.hidden = true;
-  // Yahan bhi localStorage karein
-  localStorage.setItem('rinix-install-dismissed', '1');
-});
+  // Install Button Click Handler (Ye missing tha)
+  installBtn.addEventListener('click', async () => {
+    if (!deferredPrompt) return;
+    
+    // Prompt show karein
+    deferredPrompt.prompt();
+    
+    const { outcome } = await deferredPrompt.userChoice;
+    console.log(`User response to the install prompt: ${outcome}`);
+    
+    // Prompt use ho chuka hai, null kar dein
+    deferredPrompt = null;
+    toast.hidden = true;
+  });
 
+  // Dismiss Button Click Handler
+  dismissBtn.addEventListener('click', () => {
+    toast.hidden = true;
+    localStorage.setItem('rinix-install-dismissed', '1');
+  });
 
   window.addEventListener('appinstalled', () => {
     toast.hidden = true;
+    deferredPrompt = null;
   });
 }
+
 
 /* ---------- Footer year ---------- */
 function initFooterYear() {

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rinix Agency | Premium Web Development and Digital Solutions</title>
+<meta name="description" content="Rinix builds premium websites, web apps, and digital products for startups and growing businesses. Custom design, fast builds, real results.">
+<link rel="canonical" href="https://rinix.netlify.app/">
+<meta name="theme-color" content="#0A0A0C">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Rinix Agency">
+<meta name="keywords" content="web development agency, custom web design, UI UX design, e-commerce development, web app development, website maintenance">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rinix Agency | Premium Web Development and Digital Solutions">
+<meta property="og:description" content="Rinix builds premium websites, web apps, and digital products for startups and growing businesses. Custom design, fast builds, real results.">
+<meta property="og:image" content="https://rinix.netlify.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://rinix.netlify.app/">
+<meta property="og:site_name" content="Rinix Agency">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rinix Agency | Premium Web Development and Digital Solutions">
+<meta name="twitter:description" content="Rinix builds premium websites, web apps, and digital products for startups and growing businesses.">
+<meta name="twitter:image" content="https://rinix.netlify.app/og-image.png">
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="icon-192.png">
+
+<!-- Analytics slots (fill in production IDs before deploy) -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script> -->
+<!-- <meta name="google-site-verification" content="PASTE_SEARCH_CONSOLE_CODE_HERE"> -->
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Font Awesome for Premium Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
+
+<!-- Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Rinix Agency",
+  "url": "https://rinix.netlify.app/",
+  "logo": "https://rinix.netlify.app/logo.png",
+  "description": "Premium web development and digital solutions agency building custom websites, web apps, and e-commerce platforms.",
+  "email": "contact.rinix@proton.me",
+  "sameAs": []
+}
+</script>
+
+<!-- Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Web Development and Digital Design",
+  "provider": {
+    "@type": "Organization",
+    "name": "Rinix Agency"
+  },
+  "areaServed": "Worldwide",
+  "description": "Custom website design, web app development, UI/UX design, e-commerce platforms, and website maintenance for businesses and startups.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Rinix Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Website Design" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web App Development" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "E-commerce Development" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Maintenance & Optimization" } }
+    ]
+  }
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does a typical project take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most marketing websites take two to four weeks. Custom web apps and e-commerce platforms typically run four to eight weeks depending on scope." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Rinix offer ongoing maintenance after launch?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Rinix offers ongoing maintenance, performance optimization, and custom scripting after your site or app goes live." }
+    },
+    {
+      "@type": "Question",
+      "name": "What technologies does Rinix build with?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Rinix builds with modern, lightweight, standards-based technology chosen for each project's needs, prioritizing speed, accessibility, and long-term maintainability." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I start a project with Rinix?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Reach out through the contact form or email contact.rinix@proton.me with a short description of your project, and Rinix will follow up to schedule a discovery call." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ===== NAVIGATION ===== -->
+<header class="site-header" id="site-header">
+  <nav class="navbar" aria-label="Primary navigation">
+    <a href="#top" class="brand" aria-label="Rinix Agency home">
+      <img src="logo.png" alt="Rinix logo" class="brand-mark" width="34" height="34">
+      <span class="brand-word">Rinix</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#work" class="nav-link">Work</a></li>
+      <li><a href="#process" class="nav-link">Process</a></li>
+      <li><a href="#contact" class="nav-link nav-cta">Start a project</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <p class="eyebrow reveal">Web development &amp; digital solutions</p>
+    <h1 class="hero-title reveal">
+      Websites that feel <span class="gradient-text">premium</span>,
+      built to <span class="gradient-text">perform</span>.
+    </h1>
+    <p class="hero-sub reveal">
+      Rinix designs and builds fast, custom websites and web apps for founders
+      and businesses who need more than a template &mdash; and can't afford to wait
+      for one that works.
+    </p>
+    <div class="hero-actions reveal">
+      <a href="#contact" class="btn btn-primary">Start your project</a>
+      <a href="#work" class="btn btn-secondary">See our work</a>
+    </div>
+    <div class="hero-meta reveal" aria-label="Build quality indicators">
+      <span class="meta-pill">Lighthouse 95+ target</span>
+      <span class="meta-pill">Installable PWA</span>
+      <span class="meta-pill">Built mobile-first</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="reveal">
+      <p class="eyebrow">About Rinix</p>
+      <h2 class="section-title">A small studio, built for founders who move fast.</h2>
+    </div>
+    <div class="about-copy reveal">
+      <p>
+        Rinix is a web development and digital solutions agency for new
+         businesses, startup founders, and teams who need a website or
+        web app that actually works &mdash; not just one that looks good in a
+        screenshot.
+      </p>
+      <p>
+        We keep every build lean: modern, standards-based code with no
+        unnecessary dependencies, so your site loads fast, ranks well, and
+        stays easy to maintain long after launch. Every project is designed
+        and engineered by the same small team from first call to
+        deployment.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section section-alt" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Services</p>
+      <h2 class="section-title">What we build</h2>
+      <p class="section-sub">Full-scope digital work, from first sketch to production deployment.</p>
+    </div>
+
+    <div class="grid services-grid">
+      <article class="card service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v9a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" stroke="url(#g1)" stroke-width="1.6"/><path d="M2 20h20" stroke="url(#g1)" stroke-width="1.6" stroke-linecap="round"/><defs><linearGradient id="g1" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#00D2FF"/><stop offset="1" stop-color="#C026D3"/></linearGradient></defs></svg>
+        </div>
+        <h3>Custom Website Design</h3>
+        <p>Bespoke marketing sites designed around your brand and built to convert visitors into inquiries.</p>
+      </article>
+
+      <article class="card service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="url(#g2)" stroke-width="1.6"/><path d="M8 21h8M12 18v3" stroke="url(#g2)" stroke-width="1.6" stroke-linecap="round"/><defs><linearGradient id="g2" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#00D2FF"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs></svg>
+        </div>
+        <h3>Web App Development</h3>
+        <p>Custom digital products and internal tools engineered for real workflows, not just demos.</p>
+      </article>
+
+      <article class="card service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v4H4zM4 10h10v10H4zM16 10h4v10h-4z" stroke="url(#g3)" stroke-width="1.6" stroke-linejoin="round"/><defs><linearGradient id="g3" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#7C3AED"/><stop offset="1" stop-color="#C026D3"/></linearGradient></defs></svg>
+        </div>
+        <h3>UI/UX Design</h3>
+        <p>Interface design grounded in clarity and usability, from wireframes through polished visual systems.</p>
+      </article>
+
+      <article class="card service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="2" stroke="url(#g4)" stroke-width="1.6"/><circle cx="17" cy="17" r="2" stroke="url(#g4)" stroke-width="1.6"/><path d="M9 11v3a2 2 0 002 2h4M17 13V9a2 2 0 00-2-2h-4" stroke="url(#g4)" stroke-width="1.6"/><defs><linearGradient id="g4" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#00D2FF"/><stop offset="1" stop-color="#C026D3"/></linearGradient></defs></svg>
+        </div>
+        <h3>E-commerce Development</h3>
+        <p>Storefronts and product experiences built for speed, trust, and a checkout that doesn't lose sales.</p>
+      </article>
+
+      <article class="card service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l1.8 4.5L18 9l-4.2 1.5L12 15l-1.8-4.5L6 9l4.2-1.5L12 3z" stroke="url(#g5)" stroke-width="1.4" stroke-linejoin="round"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8.8-2z" stroke="url(#g5)" stroke-width="1.2" stroke-linejoin="round"/><defs><linearGradient id="g5" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#00D2FF"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs></svg>
+        </div>
+        <h3>Website Maintenance &amp; Optimization</h3>
+        <p>Ongoing performance tuning, updates, and custom scripting to keep your site fast and current.</p>
+      </article>
+
+      <article class="card service-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v6c0 5-3.5 8.5-7 11-3.5-2.5-7-6-7-11V5l7-3z" stroke="url(#g6)" stroke-width="1.6" stroke-linejoin="round"/><defs><linearGradient id="g6" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#7C3AED"/><stop offset="1" stop-color="#00D2FF"/></linearGradient></defs></svg>
+        </div>
+        <h3>Progressive Web Apps</h3>
+        <p>Installable, offline-ready experiences that feel native and keep users coming back.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO ===== -->
+<section class="section" id="work">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Selected work</p>
+      <h2 class="section-title">Projects we've shipped</h2>
+      <p class="section-sub">A look at recent builds across messaging, e-commerce, and product engineering.</p>
+    </div>
+
+    <div class="grid portfolio-grid" id="portfolioGrid">
+      <!-- Rendered by app.js from the portfolioProjects data array -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="section section-alt" id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">How we work</p>
+      <h2 class="section-title">Our process</h2>
+      <p class="section-sub">A clear, sequential path from first conversation to launch day.</p>
+    </div>
+
+    <ol class="process-list">
+      <li class="process-step reveal">
+        <span class="step-index">01</span>
+        <div>
+          <h3>Discovery</h3>
+          <p>We learn your goals, audience, and constraints, then scope the project so there are no surprises later.</p>
+        </div>
+      </li>
+      <li class="process-step reveal">
+        <span class="step-index">02</span>
+        <div>
+          <h3>Design</h3>
+          <p>We design a visual direction and key screens for your review before a single line of production code is written.</p>
+        </div>
+      </li>
+      <li class="process-step reveal">
+        <span class="step-index">03</span>
+        <div>
+          <h3>Build</h3>
+          <p>We develop against the approved design, with regular check-ins so you always know where the project stands.</p>
+        </div>
+      </li>
+      <li class="process-step reveal">
+        <span class="step-index">04</span>
+        <div>
+          <h3>Launch</h3>
+          <p>We test across devices, verify performance and SEO, then deploy to production and confirm everything works live.</p>
+        </div>
+      </li>
+      <li class="process-step reveal">
+        <span class="step-index">05</span>
+        <div>
+          <h3>Support</h3>
+          <p>Post-launch, we're available for maintenance, optimization, and new features as your product grows.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <p class="eyebrow">Get in touch</p>
+      <h2 class="section-title">Tell us about your project.</h2>
+      <p class="section-sub">
+        Share a few details and we'll follow up to schedule a discovery call.
+        Prefer email? Reach us directly at
+        <a class="inline-link" href="mailto:contact.rinix@proton.me">contact.rinix@proton.me</a>.
+      </p>
+    </div>
+
+<form class="contact-form reveal" id="contactForm" name="contact" method="POST" data-netlify="true" novalidate>
+  
+  <!-- Yeh hidden input Netlify ke liye zaroori hai -->
+  <input type="hidden" name="form-name" value="contact">
+
+  <div class="form-row">
+    <label for="cf-name">Name</label>
+    <input type="text" id="cf-name" name="name" autocomplete="name" required aria-required="true">
+    <span class="field-error" id="err-name" role="alert"></span>
+  </div>
+
+  <div class="form-row">
+    <label for="cf-email">Email</label>
+    <input type="email" id="cf-email" name="email" autocomplete="email" required aria-required="true">
+    <span class="field-error" id="err-email" role="alert"></span>
+  </div>
+
+  <!-- Mobile Number Field -->
+  <div class="form-row">
+    <label for="cf-phone">Mobile Number</label>
+    <input type="tel" id="cf-phone" name="phone" autocomplete="tel" placeholder="Enter your phone number" required aria-required="true">
+    <span class="field-error" id="err-phone" role="alert"></span>
+  </div>
+
+  <div class="form-row">
+    <label for="cf-project">Project type</label>
+    <select id="cf-project" name="project" required aria-required="true">
+      <option value="" disabled selected>Select one</option>
+      <option value="Website">Custom website</option>
+      <option value="Web App">Web app</option>
+      <option value="UI/UX">UI/UX design</option>
+      <option value="E-commerce">E-commerce platform</option>
+      <option value="Maintenance">Maintenance / optimization</option>
+      <option value="Other">Other</option>
+    </select>
+    <span class="field-error" id="err-project" role="alert"></span>
+  </div>
+
+  <div class="form-row">
+    <label for="cf-message">Project details</label>
+    <textarea id="cf-message" name="message" rows="5" required aria-required="true"></textarea>
+    <span class="field-error" id="err-message" role="alert"></span>
+  </div>
+
+  <button type="submit" class="btn btn-primary form-submit">Send message</button>
+
+  <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+</form>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    
+    <!-- 1. Brand & Details -->
+    <div class="footer-brand">
+      <a href="#top" class="brand" aria-label="Rinix Agency home">
+        <img src="logo.png" alt="Rinix logo" class="brand-mark" width="28" height="28">
+        <span class="brand-word">Rinix</span>
+      </a>
+      <p class="footer-tag">Premium web development and digital solutions.</p>
+      <p class="footer-tag" style="margin-top: 8px;">
+        <i class="fa-solid fa-building"></i> Est. 1/1/2026
+      </p>
+    </div>
+
+    <!-- 2. Quick Links -->
+    <nav class="footer-nav" aria-label="Quick links">
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+    </nav>
+
+    <!-- 3. Projects & Portfolio -->
+    <nav class="footer-nav" aria-label="Our Projects">
+      <h4>Our Projects</h4>
+      <a href="https://rs-appstore.blogspot.com" target="_blank" rel="noopener noreferrer">RS App Store</a>
+      <a href="https://rehansandhi181.blogspot.com" target="_blank" rel="noopener noreferrer">Latest Portfolio</a>
+    </nav>
+
+    <!-- 4. Contact & Social -->
+    <div class="footer-contact">
+      <h4>Contact & Social</h4>
+      <a class="inline-link" href="mailto:contact.rinix@proton.me">
+        <i class="fa-solid fa-envelope"></i> contact.rinix@proton.me
+      </a>
+      <a class="inline-link" href="https://instagram.com/rinix.netlify.app" target="_blank" rel="noopener noreferrer" style="margin-top: 8px;">
+        <i class="fa-brands fa-instagram"></i> @rinix.netlify.app
+      </a>
+    </div>
+
+  </div>
+  
+  <!-- Copyright & All Rights Reserved -->
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year">2026</span> Rinix Agency. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<!-- index.html mein -->
+<div class="install-toast" id="installToast" hidden>
+  <span>Install Rinix as an app for faster access.</span>
+  <button id="installBtn" class="btn btn-secondary btn-sm">Install</button>
+  <button id="installDismiss" class="toast-dismiss" aria-label="Dismiss">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+</div>
+
+
+<script src="app.js"></script>
+<script src="sw-register.js"></script>
+</body>
+</html>

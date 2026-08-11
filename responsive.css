@@ -64,15 +64,19 @@
 
   .hero { padding-top: calc(var(--header-h) + var(--space-4)); padding-bottom: var(--space-5); }
   .hero-actions .btn { flex: 1 1 auto; }
+   }
 
 @media (max-width: 767px) {
   .install-toast {
     left: var(--space-2);
     right: var(--space-2);
     transform: none;
-    /* flex-wrap: wrap; ko hata diya hai */
+    width: auto; 
+    gap: 8px;
+    padding: 10px 12px;
   }
 }
+
 
 /* ---------- 375–414 tightening ---------- */
 @media (max-width: 414px) {

@@ -602,3 +602,91 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .install-toast[hidden] {
   display: none !important;
 }
+
+/* ---------- Pricing Section Styles ---------- */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  align-items: stretch;
+}
+
+.pricing-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.pricing-card.popular {
+  border-color: var(--border-accent);
+  background: var(--elevated);
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-blue);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  right: var(--space-3);
+  background: var(--gradient-brand);
+  color: #050507;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.pricing-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+}
+
+.pricing-price {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-4) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.pricing-features li {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pricing-features li i {
+  color: var(--accent-blue);
+  font-size: 0.85rem;
+}
+
+/* Responsive adjustment for pricing cards */
+@media (max-width: 1023px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}

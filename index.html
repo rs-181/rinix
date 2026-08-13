@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Rinix Agency | Premium Web Development and Digital Solutions">
   <meta property="og:description" content="Rinix builds premium websites, web apps, and digital products for startups and growing businesses. Custom design, fast builds, real results.">
-  <meta property="og:image" content="https://rinix.online/og-image.png">
+  <meta property="og:image" content="https://rinix.online/og-image.webp">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://rinix.online/">
@@ -26,13 +26,13 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Rinix Agency | Premium Web Development and Digital Solutions">
   <meta name="twitter:description" content="Rinix builds premium websites, web apps, and digital products for startups and growing businesses.">
-  <meta name="twitter:image" content="https://rinix.online/og-image.png">
+  <meta name="twitter:image" content="https://rinix.online/og-image.webp">
 
   <!-- PWA -->
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="icon-192.png" sizes="192x192">
-  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="icon" type="image/webp" href="icon-192.webp" sizes="192x192">
+  <link rel="apple-touch-icon" href="icon-192.webp">
 
   <!-- Analytics slots (fill in production IDs before deploy) -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script> -->
@@ -48,9 +48,19 @@
   <!-- Font Awesome non-blocking load -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-  <link rel="preload" href="logo.png" as="image">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="responsive.css">
+  <link rel="preload" href="logo.webp" as="image">
+  <!-- Non-blocking CSS Loading -->
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+  <link rel="stylesheet" href="responsive.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="responsive.css"></noscript>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+</noscript>
 
   <!-- Organization Schema -->
   <script type="application/ld+json">
@@ -59,7 +69,7 @@
       "@type": "Organization",
       "name": "Rinix Agency",
       "url": "https://rinix.online/",
-      "logo": "https://rinix.online/logo.png",
+      "logo": "https://rinix.online/logo.webp",
       "description": "Premium web development and digital solutions agency building custom websites, web apps, and e-commerce platforms.",
       "email": "info@rinix.online",
       "sameAs": []
@@ -168,7 +178,7 @@
   <header class="site-header" id="site-header">
     <nav class="navbar" aria-label="Primary navigation">
       <a href="#top" class="brand" aria-label="Rinix Agency home">
-        <img src="logo.png" alt="Rinix logo" class="brand-mark" width="34" height="34" fetchpriority="high" loading="eager">
+        <img src="logo.webp" alt="Rinix logo" class="brand-mark" width="34" height="34" fetchpriority="high" loading="eager">
 
         <span class="brand-word">Rinix</span>
       </a>
@@ -178,11 +188,12 @@
       </button>
 
       <ul class="nav-menu" id="navMenu">
+        <li><a href="#top" class="nav-link">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#services" class="nav-link">Services</a></li>
         <li><a href="#work" class="nav-link">Work</a></li>
         <li><a href="#process" class="nav-link">Process</a></li>
-        <li><a href="#contact" class="nav-link nav-cta">Start a project</a></li>
+        <li><a href="#plans" class="nav-link nav-cta">Plans</a></li>
       </ul>
     </nav>
   </header>
@@ -403,6 +414,63 @@
       </div>
     </section>
 
+<!-- ===== PRICING PLANS ===== -->
+<section class="section" id="plans">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Investment plans</p>
+      <h2 class="section-title">Choose the Right Package for Your Brand</h2>
+      <p class="section-sub">
+        Transparent pricing tailored for startups and growing businesses.
+      </p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Starter Option -->
+      <article class="card pricing-card reveal">
+        <h3>Starter Option</h3>
+        <div class="pricing-price">₹10,000</div>
+        <ul class="pricing-features">
+          <li><i class="fa-solid fa-check"></i> Static Website</li>
+          <li><i class="fa-solid fa-check"></i> Free Hosting & Subdomain (1 Year)</li>
+          <li><i class="fa-solid fa-check"></i> Free SSL Certificate (1 Year)</li>
+          <li><i class="fa-solid fa-check"></i> WhatsApp, Instagram & Social Media Integration</li>
+        </ul>
+        <a href="#contact" class="btn btn-secondary">Discuss Project Details</a>
+      </article>
+
+      <!-- Most Popular -->
+      <article class="card pricing-card popular reveal">
+        <span class="pricing-badge">Most Popular</span>
+        <h3>Dynamic Website</h3>
+        <div class="pricing-price">₹15,000</div>
+        <ul class="pricing-features">
+          <li><i class="fa-solid fa-check"></i> Everything in the ₹10k Package</li>
+          <li><i class="fa-solid fa-check"></i> Inquiry & Order Form (Direct Leads)</li>
+          <li><i class="fa-solid fa-check"></i> SEO Optimized Structure</li>
+          <li><i class="fa-solid fa-check"></i> Best Performance & Speed Optimization</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Discuss Project Details</a>
+      </article>
+
+      <!-- Ultimate Custom Solution -->
+      <article class="card pricing-card reveal" id="plan">
+        <h3>Custom Enterprise</h3>
+        <div class="pricing-price">₹20,000</div>
+        <ul class="pricing-features">
+          <li><i class="fa-solid fa-check"></i> Everything in ₹10k & ₹15k Packages</li>
+          <li><i class="fa-solid fa-check"></i> Free Domain Name for 1 Year</li>
+          <li><i class="fa-solid fa-check"></i> Admin Panel to Manage Content Easily</li>
+          <li><i class="fa-solid fa-check"></i> Fully Responsive Design + PWA</li>
+          <li><i class="fa-solid fa-check"></i> 100% Tailored Custom Design</li>
+        </ul>
+        <a href="#contact" class="btn btn-secondary">Discuss Project Details</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+
     <!-- ===== CONTACT ===== -->
     <section class="section" id="contact">
       <div class="container contact-grid">
@@ -484,7 +552,7 @@
     <!-- 1. Brand & Details -->
     <div class="footer-brand">
       <a href="#top" class="brand" aria-label="Rinix Agency home">
-        <img src="logo.png" alt="Rinix logo" class="brand-mark" width="28" height="28">
+        <img loading="lazy" src="logo.webp" alt="Rinix logo" class="brand-mark" width="28" height="28">
         <span class="brand-word">Rinix</span>
       </a>
       <p class="footer-tag">
@@ -496,24 +564,26 @@
     </div>
 
     <!-- 2. Quick Links -->
-    <nav class="footer-nav" aria-label="Quick links">
-      <h4>Quick Links</h4>
+    <div class="footer-nav" aria-label="Quick links">
+      <h3>Quick Links</h3>
+      <a href="#top">Home</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#work">Work</a>
       <a href="#process">Process</a>
-    </nav>
+      <a href="#plans">Plans</a>
+    </div>
 
     <!-- 3. Projects & Portfolio -->
-    <nav class="footer-nav" aria-label="Our Projects">
-      <h4>Our Projects</h4>
+    <div class="footer-nav" aria-label="Our Projects">
+      <h3>Our Projects</h3>
       <a href="https://store.rinix.online/" target="_blank" rel="noopener noreferrer">Rinix Store</a>
       <a href="https://rehansandhi181.blogspot.com" target="_blank" rel="noopener noreferrer">Latest Portfolio</a>
-    </nav>
+    </div>
 
     <!-- 4. Contact & Social -->
     <div class="footer-contact">
-      <h4>Contact & Social</h4>
+      <h3>Contact & Social</h3>
       <a class="inline-link" href="mailto:info@rinix.online">
         <i class="fa-solid fa-envelope"></i> info@rinix.online
       </a>
@@ -521,6 +591,7 @@
         <i class="fa-brands fa-instagram"></i> @rinix.online
       </a>
     </div>
+
 
   </div>
 

@@ -1,0 +1,11 @@
+/logo.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/icon-*.webp
+  Cache-Control: public, max-age=31536000, immutable

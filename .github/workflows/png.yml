@@ -1,0 +1,24 @@
+name: Remove PNG Files
+
+on:
+  push:
+    branches:
+      - main  # Aap apni zaroorat ke mutabiq branch ka naam badal sakte hain
+
+jobs:
+  remove-pngs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Delete PNG files
+        run: |
+          find . -name "*.png" -type f -delete
+          
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-remove PNG files [skip ci]"
+          branch: main
+
